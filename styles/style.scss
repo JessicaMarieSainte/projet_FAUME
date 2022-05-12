@@ -1,0 +1,18 @@
+@import url(./header.scss);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "supreme", "Helvetica", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 0.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+}

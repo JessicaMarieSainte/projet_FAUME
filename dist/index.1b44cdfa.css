@@ -1,0 +1,305 @@
+main {
+  height: 100vh;
+}
+
+main .femme {
+  height: 50%;
+  position: relative;
+}
+
+main .femme__background {
+  height: 100%;
+}
+
+main .femme__background .femme__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: auto 1 / 1;
+}
+
+main .femme__text {
+  flex-direction: column;
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main .femme__text h2 {
+  letter-spacing: .05em;
+  text-align: center;
+  margin-bottom: 2vw;
+  font-size: 8vw;
+}
+
+main .femme__text a {
+  color: #fff;
+  color: #fff;
+  letter-spacing: .15em;
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+main .menuhidden {
+  color: #000;
+  height: 100vh;
+  width: 85%;
+  z-index: 9000;
+  transform-origin: 0;
+  background: #fff;
+  transition: transform .5s cubic-bezier(0, 0, .13, 1.01);
+  position: fixed;
+  top: 0;
+  transform: translate(-100%);
+}
+
+main .menuhidden .menuhidden__close {
+  justify-content: end;
+  display: flex;
+}
+
+main .menuhidden .menuhidden__close img {
+  padding: 1rem;
+}
+
+main .menuhidden span {
+  width: 100%;
+  border-bottom: 2px solid #000;
+  display: block;
+}
+
+main .menuhidden nav ul {
+  padding: 0 1rem;
+  list-style: none;
+}
+
+main .menuhidden nav li {
+  letter-spacing: .1rem;
+  border-bottom: 1px solid #e6e6e6;
+  justify-content: space-between;
+  padding: 1.35rem 0;
+  font-size: .9rem;
+  font-weight: bold;
+  display: flex;
+}
+
+main .menuhidden li a {
+  color: #000;
+  margin-left: .8rem;
+  text-decoration: none;
+}
+
+main .menuhidden li.nav__buyWomen:after, main .menuhidden li.nav__buyMen:after {
+  content: "";
+  width: .7rem;
+  height: .7rem;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  margin-right: 1.2rem;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+main .menuhidden__reassurance {
+  background-color: #000;
+  flex-direction: column;
+  padding: 0 1rem;
+  list-style: none;
+  display: flex;
+}
+
+main .menuhidden__reassurance li {
+  letter-spacing: .1rem;
+  padding: .9rem 0;
+  font-size: .6rem;
+  font-weight: bold;
+}
+
+main .menuhidden__reassurance li a {
+  color: #fff;
+}
+
+main .menuhidden__reassurance li img {
+  width: .9rem;
+}
+
+main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance li img.aide__icone, main .menuhidden__reassurance li img.boutique__icone {
+  filter: invert();
+}
+
+.header {
+  width: 100vw;
+  z-index: 1000;
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.header .header__backSandro {
+  color: #fff;
+  height: 2.5rem;
+  width: 100vw;
+  letter-spacing: 1px;
+  z-index: 1000;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.header .header__backSandro a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.header .header__nav {
+  z-index: 1000;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.3rem;
+  display: flex;
+  position: fixed;
+  top: 2.8rem;
+  left: 0;
+}
+
+.header .sandroLogo img {
+  filter: invert();
+  width: 110px;
+}
+
+.header .nav__searchBar {
+  z-index: 1000;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.3rem;
+  display: flex;
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  overflow: hidden;
+}
+
+.header .nav__searchBar form {
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  justify-content: center;
+  padding: 6px 10px;
+  display: flex;
+}
+
+.header .nav__searchBar form input {
+  background: none;
+  border: 0;
+  flex-grow: 1;
+  font-size: .7rem;
+}
+
+.header .nav__searchBar form input::placeholder {
+  color: #fff;
+}
+
+.header .nav__searchBar form button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+}
+
+.background__headerChangies {
+  width: 100%;
+  transform-origin: top;
+  z-index: 900;
+  background-color: #fff;
+  border: 1px solid #fff;
+  transition: transform .3s cubic-bezier(0, 0, .13, 1.01);
+  position: fixed;
+  top: 0;
+  transform: scaleY(0);
+}
+
+.footer {
+  color: #000;
+  flex-direction: column;
+  padding: 3rem 1rem 0;
+  display: flex;
+}
+
+.footer .sandroLogo img {
+  width: 100px;
+  margin: auto;
+  display: block;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer p {
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 2rem 0;
+  font-weight: bold;
+  text-decoration: underline;
+  display: flex;
+}
+
+.footer p.footer__faume {
+  letter-spacing: 1.5px;
+  border-bottom: none;
+  padding: 5rem 0 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+}
+
+.footer p.footer__faume a {
+  color: #000;
+  font-size: .7rem;
+  text-decoration: none;
+  display: flex;
+}
+
+.footer li p:after, .footer__faume a:after {
+  content: "";
+  width: .3rem;
+  height: .3rem;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  margin-top: .2rem;
+  margin-left: 1.8rem;
+  display: block;
+  transform: rotate(45deg);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  scroll-behavior: smooth;
+  color: #fff;
+  font-family: supreme, Helvetica, sans-serif;
+  font-size: .6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=index.1b44cdfa.css.map */

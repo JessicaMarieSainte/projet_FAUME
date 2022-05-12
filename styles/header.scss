@@ -1,0 +1,268 @@
+main {
+  height: 100vh;
+  .femme {
+    height: 51%;
+    position: relative;
+  }
+  .femme__background {
+    height: 100%;
+    .femme__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: auto 1/1;
+    }
+  }
+  .femme__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    h2 {
+      letter-spacing: 0.05em;
+      text-align: center;
+      font-size: 8vw;
+      margin-bottom: 2vw;
+    }
+    a {
+      text-decoration: none;
+      color: #ffff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 3vw;
+      font-weight: bold;
+      line-height: 1.8;
+      letter-spacing: 0.15em;
+    }
+  }
+  .menuhidden {
+    position: fixed;
+    top: 0;
+    background: white;
+    color: black;
+    height: 100vh;
+    width: 85%;
+    z-index: 9000;
+    transform: translate(-100%);
+    transform-origin: left;
+    transition: transform cubic-bezier(0, 0, 0.13, 1.01) 0.5s;
+    .menuhidden__close {
+      display: flex;
+      justify-content: end;
+      img {
+        padding: 1rem;
+      }
+    }
+    span {
+      border-bottom: 2px solid black;
+      width: 100%;
+      display: block;
+    }
+    nav ul {
+      padding: 0 1rem;
+      list-style: none;
+    }
+    nav li {
+      border-bottom: 1px solid #e6e6e6;
+      padding: 1.35rem 0;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    li a {
+      text-decoration: none;
+      color: black;
+      margin-left: 0.8rem;
+    }
+    li.nav__buyWomen::after,
+    li.nav__buyMen::after {
+      content: "";
+      width: 0.7rem;
+      height: 0.7rem;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      margin-right: 1.2rem;
+      display: inline-block;
+      transform: rotate(-45deg);
+    }
+  }
+  .menuhidden__reassurance {
+    display: flex;
+
+    flex-direction: column;
+    padding: 0 1rem;
+    list-style: none;
+    background-color: black;
+    li {
+      padding: 0.9rem 0;
+      font-size: 0.6rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+    }
+    li a {
+      color: white;
+    }
+    li img {
+      width: 0.9rem;
+    }
+    li img.login__icone,
+    li img.aide__icone,
+    li img.boutique__icone {
+      filter: invert(1);
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  top: 0;
+  .header__backSandro {
+    background-color: black;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 1000;
+    a {
+      text-decoration: none;
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  .header__nav {
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    top: 2.8rem;
+    left: 0;
+    justify-content: space-between;
+    padding: 0 1.3rem;
+    width: 100%;
+    align-items: center;
+  }
+  .sandroLogo img {
+    filter: invert(1);
+    width: 110px;
+  }
+  .nav__searchBar {
+    z-index: 1000;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.3rem;
+    form {
+      display: flex;
+      justify-content: center;
+      max-width: 500px;
+      border: solid 1px white;
+      border-radius: 5px;
+      padding: 6px 10px;
+      width: 100%;
+      input {
+        font-size: 0.7rem;
+        flex-grow: 1;
+        background: none;
+        border: 0;
+      }
+      input::placeholder {
+        color: white;
+      }
+      button {
+        flex-shrink: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.background__headerChangies {
+  border: 1px solid white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform cubic-bezier(0, 0, 0.13, 1.01) 0.3s;
+  transform-origin: top;
+  z-index: 900;
+  background-color: white;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem 0 1rem;
+  color: black;
+  .sandroLogo img {
+    width: 100px;
+    margin: auto;
+    display: block;
+  }
+  ul {
+    list-style: none;
+  }
+  p {
+    padding: 2rem 0;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 1.5px;
+    border-bottom: solid 1px #e6e6e6;
+    display: flex;
+  }
+  p.footer__faume {
+    padding: 5rem 0 2rem 0;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-bottom: none;
+    display: flex;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 0.7rem;
+      display: flex;
+    }
+  }
+}
+.footer li p::after {
+  content: "";
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-left: 1.8rem;
+  margin-top: 0.2rem;
+  display: block;
+  transform: rotate(45deg);
+}
+.footer__faume a::after {
+  content: "";
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-left: 1.8rem;
+  margin-top: 0.2rem;
+  display: block;
+  transform: rotate(45deg);
+}
