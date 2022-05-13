@@ -273,6 +273,16 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
   display: flex;
 }
 
+.footer .liHidden {
+  letter-spacing: 1.5px;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.footer .liHidden li {
+  padding: .9rem 0;
+}
+
 .footer li p:after, .footer__faume a:after {
   content: "";
   width: .3rem;

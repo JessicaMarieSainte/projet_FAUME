@@ -243,6 +243,14 @@ main {
       display: flex;
     }
   }
+  .liHidden {
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    li {
+      padding: 0.9rem 0;
+    }
+  }
 }
 .footer li p::after {
   content: "";

@@ -35,5 +35,6 @@ $menuOpen.addEventListener("click", ()=>{
 $menuClose.addEventListener("click", ()=>{
     $menuHidden.style.transform = "translate(-100%)";
 });
+let $liOpen = document.querySelectorAll(".liOpen");
 
 //# sourceMappingURL=index.755ad20f.js.map
