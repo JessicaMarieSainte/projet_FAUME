@@ -226,7 +226,7 @@ main {
     font-weight: bold;
     text-decoration: underline;
     letter-spacing: 1.5px;
-    border-bottom: solid 1px #e6e6e6;
+
     display: flex;
   }
   p.footer__faume {
@@ -243,7 +243,21 @@ main {
       display: flex;
     }
   }
-  .liHidden {
+  .ulHidden {
+    display: none;
+  }
+  .liOpen {
+    display: flex;
+    align-items: baseline;
+    border-bottom: solid 1px #e6e6e6;
+  }
+  .liOpenOpen {
+    display: flex;
+    align-items: baseline;
+    border-bottom: none;
+  }
+  .isOpen {
+    display: block;
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
@@ -252,7 +266,7 @@ main {
     }
   }
 }
-.footer li p::after {
+.footer li span {
   content: "";
   border-right: solid 1px black;
   border-bottom: solid 1px black;

@@ -36,5 +36,11 @@ $menuClose.addEventListener("click", ()=>{
     $menuHidden.style.transform = "translate(-100%)";
 });
 let $liOpen = document.querySelectorAll(".liOpen");
+let $spanOpen = document.querySelectorAll(".liOpen span");
+let $ulHidden = document.querySelectorAll(".ulHidden");
+for(let i = 0; i < $liOpen.length; i++)$liOpen[i].addEventListener("click", ()=>{
+    $ulHidden[i].classList.toggle("isOpen");
+    $liOpen[i].classList.toggle("liOpenOpen");
+});
 
 //# sourceMappingURL=index.755ad20f.js.map

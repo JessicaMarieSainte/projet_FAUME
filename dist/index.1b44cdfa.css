@@ -250,7 +250,6 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
 
 .footer p {
   letter-spacing: 1.5px;
-  border-bottom: 1px solid #e6e6e6;
   padding: 2rem 0;
   font-weight: bold;
   text-decoration: underline;
@@ -273,17 +272,34 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
   display: flex;
 }
 
-.footer .liHidden {
+.footer .ulHidden {
+  display: none;
+}
+
+.footer .liOpen {
+  border-bottom: 1px solid #e6e6e6;
+  align-items: baseline;
+  display: flex;
+}
+
+.footer .liOpenOpen {
+  border-bottom: none;
+  align-items: baseline;
+  display: flex;
+}
+
+.footer .isOpen {
   letter-spacing: 1.5px;
   font-size: .8rem;
   font-weight: bold;
+  display: block;
 }
 
-.footer .liHidden li {
+.footer .isOpen li {
   padding: .9rem 0;
 }
 
-.footer li p:after, .footer__faume a:after {
+.footer li span, .footer__faume a:after {
   content: "";
   width: .3rem;
   height: .3rem;
