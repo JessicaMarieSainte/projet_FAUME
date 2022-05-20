@@ -13,5 +13,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.5.0",
     "parcel": "^2.5.0"
+  },
+  "dependencies": {
+    "netlify": "^11.0.1"
   }
 }

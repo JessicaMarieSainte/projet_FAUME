@@ -10,11 +10,13 @@ function headerChangies() {
     $navBar.style.filter = "invert(1)";
     $searchBar.style.marginTop = "-30px";
     $searchBar.style.filter = "invert(1)";
-    $backgroundBefore.style.transform = "scaleY(60)";
+    if (window.matchMedia("(min-width: 850px)").matches) {
+        console.log("je suis là");
+        $backgroundBefore.style.transform = "scaleY(35)";
+    } else $backgroundBefore.style.transform = "scaleY(60)";
 }
 window.addEventListener("scroll", ()=>{
     var currentScroll = window.scrollY;
-    console.log("avant", currentScroll);
     if (40 > currentScroll) {
         $headerBar.style.display = "";
         $navBar.style.top = "";
@@ -24,7 +26,6 @@ window.addEventListener("scroll", ()=>{
         $backgroundBefore.style.transform = "scaleY(0)";
     } else headerChangies();
     prevScroll = currentScroll;
-    console.log("apres", currentScroll);
 });
 let $menuClose = document.querySelector(".closeCross");
 let $menuOpen = document.querySelector(".burger");
