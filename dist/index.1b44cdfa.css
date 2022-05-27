@@ -219,10 +219,6 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
   filter: invert();
 }
 
-.menu__BigDesktop {
-  display: none;
-}
-
 .header {
   width: 100vw;
   z-index: 1000;
@@ -265,6 +261,11 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
   left: 0;
 }
 
+.header .header__nav .is-hidden {
+  margin-right: 2rem;
+  display: none;
+}
+
 .header .sandroLogo img {
   filter: invert();
   width: 120px;
@@ -275,7 +276,7 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 0 1.3rem;
+  padding: 1rem 1.3rem;
   display: flex;
   position: fixed;
   top: 6rem;
@@ -324,7 +325,7 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
 }
 
 @media (min-width: 850px) {
-  #menu__BigDesktop {
+  .header #menu__BigDesktop {
     width: 100%;
     text-align: center;
     list-style: none;
@@ -335,7 +336,7 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
     left: 0;
   }
 
-  #menu__BigDesktop .menu__BigDesktop__nav {
+  .header #menu__BigDesktop .menu__BigDesktop__nav {
     flex-direction: row;
     justify-content: center;
     padding: 1.3rem;
@@ -344,35 +345,47 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
     display: flex;
   }
 
-  #menu__BigDesktop li {
+  .header #menu__BigDesktop li {
     letter-spacing: .1rem;
     padding: 0 .8rem;
     font-size: .75rem;
     font-weight: 600;
   }
 
-  #menu__BigDesktop a {
+  .header #menu__BigDesktop a {
     color: #fff;
     text-decoration: none;
+    display: block;
     position: relative;
   }
 
-  #menu__BigDesktop a:after {
+  .header #menu__BigDesktop a:after {
     content: "";
     width: 100%;
-    height: 2px;
+    height: 1px;
     transform-origin: 100%;
     background-color: #fff;
-    transition: transform .5s;
+    margin-bottom: -2px;
+    transition: all .3s;
     position: absolute;
     bottom: 0;
     left: 0;
     transform: scaleX(0);
   }
 
-  #menu__BigDesktop a:hover:after {
+  .header #menu__BigDesktop a:hover:after {
     transform-origin: 0;
+    filter: invert();
+    transition: transform .3s;
     transform: scaleX(1);
+  }
+
+  .header .sandroLogo {
+    margin-left: 6.4rem;
+  }
+
+  .header .header__nav .is-hidden {
+    display: initial;
   }
 
   #nav__searchBar {

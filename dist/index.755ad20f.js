@@ -5,6 +5,7 @@ let $navBar = document.querySelector(".header__nav");
 let $searchBar = document.querySelector(".nav__searchBar");
 let $backgroundBefore = document.querySelector(".background__headerChangies");
 let $menuBigDesktop = document.querySelector("#menu__BigDesktop");
+let $abigDesktop = document.querySelectorAll(".menu__BigDesktop a");
 var prevScroll = window.scrollY;
 function headerChangies() {
     $headerBar.style.display = "none";
@@ -15,11 +16,23 @@ function headerChangies() {
     if (window.matchMedia("(min-width: 850px)").matches) {
         $backgroundBefore.style.transform = "scaleY(35)";
         $menuBigDesktop.style.display = "none";
-    } else $backgroundBefore.style.transform = "scaleY(60)";
+    } else {
+        $backgroundBefore.style.transform = "scaleY(60)";
+        $menuBigDesktop.style.display = "none";
+    }
 }
 window.addEventListener("scroll", ()=>{
     var currentScroll = window.scrollY;
-    if (40 > currentScroll) {
+    if (window.matchMedia("(min-width: 850px)").matches || 40 > currentScroll) {
+        $headerBar.style.display = "";
+        $navBar.style.top = "";
+        $navBar.style.filter = "";
+        $searchBar.style.marginTop = "";
+        $searchBar.style.filter = "";
+        $backgroundBefore.style.transform = "";
+        $menuBigDesktop.style.display = "block";
+    }
+    if (window.matchMedia("(max-width: 849px)").matches || 40 > currentScroll) {
         $headerBar.style.display = "";
         $navBar.style.top = "";
         $navBar.style.filter = "";
@@ -48,15 +61,22 @@ for(let i = 0; i < $liOpen.length; i++)$liOpen[i].addEventListener("click", ()=>
     $ulHidden[i].classList.toggle("isOpen");
     $liOpen[i].classList.toggle("liOpenOpen");
 });
+//style changing on media screen (min-width: 850px)
 function BackgroundMenuVisible() {
     $backgroundBefore.style.transform = "scaleY(75)";
     $navBar.style.filter = "invert(1)";
-    $menuBigDesktop.style.filter = "invert(1)";
+    $abigDesktop[1].style.color = "black";
+    $abigDesktop[0].style.color = "black";
+    $abigDesktop[2].style.color = "black";
+    $abigDesktop[3].style.color = "black";
 }
 function BackgroundmenuInvisble() {
     $backgroundBefore.style.transform = "scaleY(0)";
     $navBar.style.filter = "";
-    $menuBigDesktop.style.filter = "";
+    $abigDesktop[1].style.color = "";
+    $abigDesktop[0].style.color = "";
+    $abigDesktop[2].style.color = "";
+    $abigDesktop[3].style.color = "";
 }
 $navBar.addEventListener("mouseover", ()=>{
     BackgroundMenuVisible();
