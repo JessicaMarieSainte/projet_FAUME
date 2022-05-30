@@ -27,13 +27,12 @@ main {
     h2 {
       letter-spacing: 0.05em;
       text-align: center;
-      font-size: 8vw;
+      font-size: 7vw;
       margin-bottom: 2vw;
     }
     a {
       text-decoration: none;
       color: #ffff;
-      color: #fff;
       text-decoration: none;
       font-size: 2.5vw;
       font-weight: bold;
@@ -179,7 +178,7 @@ main {
     left: 0;
     width: 100%;
     overflow: hidden;
-
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,6 +220,9 @@ main {
   z-index: 900;
   background-color: white;
 }
+.header .menu__BigDesktop__nav {
+  display: none;
+}
 
 @media (min-width: 850px) {
   .header #menu__BigDesktop {
@@ -233,7 +235,7 @@ main {
     display: block;
     transition: transform cubic-bezier(0, 0, 0.13, 1.01) 0.3s,
       opacity cubic-bezier(0, 0, 0.13, 1.01) 0.3s;
-    .menu__BigDesktop__nav {
+    #menu__BigDesktop__nav {
       list-style: none;
       display: flex;
       flex-direction: row;
@@ -287,9 +289,26 @@ main {
 @media (min-width: 1024px) {
   #buySection {
     display: flex;
-  }
-  #buy {
-    height: 100vh;
+    #buy {
+      height: 100vh;
+      .buy__text {
+        padding: 0 0 6rem 2.2rem;
+      }
+      .buy__text h2 {
+        letter-spacing: 0.05em;
+        margin-bottom: 2vw;
+        font-size: 5vw;
+        text-align: left;
+      }
+      .buy__text a {
+        color: #fff;
+        letter-spacing: 0.1em;
+        font-size: 1.2vw;
+        font-weight: bold;
+        line-height: 1.3;
+        text-decoration: none;
+      }
+    }
   }
   .main {
     height: auto;
