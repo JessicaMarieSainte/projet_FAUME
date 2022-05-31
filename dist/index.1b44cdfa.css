@@ -399,11 +399,13 @@ main .menuhidden__reassurance li img.login__icone, main .menuhidden__reassurance
 
 @media (min-width: 1024px) {
   #buySection {
+    width: 100vw;
     display: flex;
   }
 
   #buySection #buy {
     height: 100vh;
+    width: 50%;
   }
 
   #buySection #buy .buy__text {
