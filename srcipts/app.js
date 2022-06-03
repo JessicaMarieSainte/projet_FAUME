@@ -2,6 +2,7 @@
 let $sectionBuy = document.querySelector("#buySection");
 let $headerBar = document.querySelector(".header__backSandro");
 let $navBar = document.querySelector(".header__nav");
+let $navBarBrightness = document.querySelector("#header__nav");
 let $searchBar = document.querySelector(".nav__searchBar");
 let $backgroundBefore = document.querySelector(".background__headerChangies");
 let $menuBigDesktop = document.querySelector("#menu__BigDesktop");
@@ -58,16 +59,29 @@ let $menuHidden = document.querySelector(".menuhidden");
 
 $menuOpen.addEventListener("click", () => {
   BackgroundmenuInvisble();
-  $navBar.removeEventListener("mouseover", BackgroundmenuInvisble);
-  $menuBigDesktop.removeEventListener("mouseover", BackgroundmenuInvisble);
+  $navBar.removeEventListener("mouseover", BackgroundmenuVisible, true);
+  $menuBigDesktop.removeEventListener("mouseover", BackgroundmenuVisible, true);
+  $navBar.removeEventListener("mouseleave", BackgroundmenuInvisble, true);
+  $menuBigDesktop.removeEventListener(
+    "mouseleave",
+    BackgroundmenuInvisble,
+    true
+  );
+  $abigDesktop[3].style.pointerEvents = "none";
+  $abigDesktop[2].style.pointerEvents = "none";
   $menuHidden.style.transform = "translate(0)";
   $sectionBuy.style.filter = "brightness(0.4)";
   $headerBar.style.filter = "brightness(0.4)";
   $navBar.style.filter = "brightness(0.4)";
   $searchBar.style.filter = "brightness(0.4)";
   $menuBigDesktop.style.filter = "brightness(0.4)";
+  //BackgroundMenuVisibleBooleen = false;
 });
 $menuClose.addEventListener("click", () => {
+  $navBar.addEventListener("mouseover", BackgroundmenuVisible, true);
+  $menuBigDesktop.addEventListener("mouseover", BackgroundmenuVisible, true);
+  $navBar.addEventListener("mouseleave", BackgroundmenuInvisble, true);
+  $menuBigDesktop.addEventListener("mouseleave", BackgroundmenuInvisble, true);
   $menuHidden.style.transform = "translate(-100%)";
   $sectionBuy.style.filter = "";
   $sectionBuy.style.filter = "";
@@ -75,6 +89,8 @@ $menuClose.addEventListener("click", () => {
   $navBar.style.filter = "";
   $searchBar.style.filter = "";
   $menuBigDesktop.style.filter = "";
+  $abigDesktop[3].style.pointerEvents = "";
+  $abigDesktop[2].style.pointerEvents = "";
 });
 
 let $liOpen = document.querySelectorAll(".liOpen");
@@ -89,7 +105,7 @@ for (let i = 0; i < $liOpen.length; i++) {
 }
 
 //style changing on media screen (min-width: 850px)
-function BackgroundMenuVisible() {
+function BackgroundmenuVisible() {
   $backgroundBefore.style.transform = "scaleY(75)";
   $navBar.style.filter = "invert(1)";
   $searchBar.style.filter = "invert(1)";
@@ -108,10 +124,10 @@ function BackgroundmenuInvisble() {
   $abigDesktop[3].style.color = "";
 }
 
-$navBar.addEventListener("mouseover", BackgroundMenuVisible);
+$navBar.addEventListener("mouseover", BackgroundmenuVisible, true);
 
-$navBar.addEventListener("mouseleave", BackgroundmenuInvisble);
+$navBar.addEventListener("mouseleave", BackgroundmenuInvisble, true);
 
-$menuBigDesktop.addEventListener("mouseover", BackgroundMenuVisible);
+$menuBigDesktop.addEventListener("mouseover", BackgroundmenuVisible, true);
 
-$menuBigDesktop.addEventListener("mouseleave", BackgroundmenuInvisble);
+$menuBigDesktop.addEventListener("mouseleave", BackgroundmenuInvisble, true);

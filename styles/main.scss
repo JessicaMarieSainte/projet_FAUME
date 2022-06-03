@@ -78,6 +78,7 @@ main {
       letter-spacing: 0.1rem;
       display: flex;
       justify-content: space-between;
+      cursor: pointer;
     }
     li a {
       text-decoration: none;
@@ -94,6 +95,15 @@ main {
       margin-right: 1.2rem;
       display: inline-block;
       transform: rotate(-45deg);
+    }
+    // li.nav__buyMen,
+    // li.nav__buyWomen {
+    //   transition: transform cubic-bezier(0, 0, 0.13, 1.01) 0.2s;
+    // }
+    li.nav__buyWomen:hover::after,
+    li.nav__buyMen:hover::after {
+      transform: translate(5px);
+      transition: transform cubic-bezier(0, 0, 0.13, 1.01) 0.2s;
     }
   }
   .menuhidden__reassurance {
@@ -271,8 +281,8 @@ main {
     }
     a:hover::after {
       transform: scaleX(1);
-      transform-origin: left;
       filter: invert(1);
+      transform-origin: left;
       transition: transform 0.3s;
     }
   }
